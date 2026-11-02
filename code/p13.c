@@ -19,7 +19,7 @@ int
 romanToInt(char* s)
 {
     int Result, Idx, Current, Next;
-	
+
     Result = 0;
 	for(Idx = 0; s[Idx] != '\0'; Idx++)
     {
@@ -54,9 +54,11 @@ main(void)
 	};
 
 	NumTests = sizeof(Tests) / sizeof(Tests[0]);
-	for (TestIdx = 0; TestIdx < NumTests; TestIdx++) {
+	for(TestIdx = 0; TestIdx < NumTests; TestIdx++)
+    {
 		Got = romanToInt(Tests[TestIdx].S);
-		if (Tests[TestIdx].Want != Got) {
+		if(Tests[TestIdx].Want != Got)
+        {
 			printf("want %d, got %d\n", Tests[TestIdx].Want, Got);
 			return(1);
 		}
